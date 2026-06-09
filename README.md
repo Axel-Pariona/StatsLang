@@ -235,7 +235,7 @@ load "alumnos.csv";
 Clonar el repositorio:
 
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/Axel-Pariona/StatsLang.git
 cd StatsLang
 ```
 
