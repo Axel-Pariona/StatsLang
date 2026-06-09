@@ -1,0 +1,23 @@
+══════════════════════════════════════════════════
+Analizando archivo: examples/valid/ejemplo2.stats
+══════════════════════════════════════════════════
+
+Árbol de parseo:
+(prog (stmt (loadStmt load "alumnos.csv") ;) (stmt (queryStmt select (aggList (aggExpr (aggFunc avg) ( nota ) as promedio) , (aggExpr (aggFunc max) ( nota )) , (aggExpr (aggFunc min) ( nota )))) ;) (stmt (histogramStmt histogram edad bins = 5) ;) <EOF>)
+Recorriendo árbol de parseo
+LOAD → alumnos.csv
+IR: print('Load dataset "alumnos.csv"')
+SELECT → selectavg(nota)aspromedio,max(nota),min(nota)
+IR: print('SELECT query')
+HISTOGRAM → edad
+IR: print('Histogram of edad')
+; ModuleID = "StatsLangModule"
+target triple = "unknown-unknown-unknown"
+target datalayout = ""
+
+define void @"main"()
+{
+entry:
+  ret void
+}
+

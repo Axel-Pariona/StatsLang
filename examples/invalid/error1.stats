@@ -1,0 +1,1 @@
+load alumnos.csv;   -- falta comillas, debe marcar error

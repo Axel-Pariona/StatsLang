@@ -1,0 +1,3 @@
+load "alumnos.csv";
+select avg(nota) as promedio, max(nota), min(nota);
+histogram edad bins=5;

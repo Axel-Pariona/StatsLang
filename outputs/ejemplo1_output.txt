@@ -1,0 +1,21 @@
+══════════════════════════════════════════════════
+Analizando archivo: examples/valid/ejemplo1.stats
+══════════════════════════════════════════════════
+
+Árbol de parseo:
+(prog (stmt (loadStmt load "ventas.csv") ;) (stmt (queryStmt select (aggList (aggExpr (aggFunc avg) ( precio ))) where (boolExpr (comparison categoria (comparator =) (value "ropa")))) ;) <EOF>)
+Recorriendo árbol de parseo
+LOAD → ventas.csv
+IR: print('Load dataset "ventas.csv"')
+SELECT → selectavg(precio)wherecategoria="ropa"
+IR: print('SELECT query')
+; ModuleID = "StatsLangModule"
+target triple = "unknown-unknown-unknown"
+target datalayout = ""
+
+define void @"main"()
+{
+entry:
+  ret void
+}
+

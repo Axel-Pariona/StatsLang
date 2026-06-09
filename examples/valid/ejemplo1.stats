@@ -1,0 +1,2 @@
+load "ventas.csv";
+select avg(precio) where categoria = "ropa";

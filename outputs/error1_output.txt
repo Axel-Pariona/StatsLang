@@ -1,0 +1,19 @@
+══════════════════════════════════════════════════
+Analizando archivo: examples/invalid/error1.stats
+══════════════════════════════════════════════════
+[SYNTAX ERROR] Línea 1:5 → mismatched input 'alumnos' expecting STRING
+
+Árbol de parseo:
+(prog (stmt (loadStmt load alumnos csv) ;) <EOF>)
+Recorriendo árbol de parseo
+Error semántico: falta el nombre del archivo entre comillas en 'load'.
+; ModuleID = "StatsLangModule"
+target triple = "unknown-unknown-unknown"
+target datalayout = ""
+
+define void @"main"()
+{
+entry:
+  ret void
+}
+
